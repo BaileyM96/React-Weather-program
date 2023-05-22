@@ -1,5 +1,6 @@
 import { SmallContainer } from './Styled/Container-styled';
 import { SmallCard } from './Styled/City-Styled';
+//Comment
 
 export default function Bonus() {
     return (
