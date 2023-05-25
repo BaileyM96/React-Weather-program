@@ -1,8 +1,12 @@
 import { Forecast } from "./Styled/City-Styled";
 import { WeekForecast } from './Styled/Container-styled'
+import useWeatherData from "./WeatherData";
 
 
-export default function weeklyForecast() {
+export default function WeeklyForecast() {
+    const weatherData = useWeatherData();
+
+    
     return (
         <>
         <WeekForecast>
