@@ -5,6 +5,10 @@ import useWeatherData from "./WeatherData";
 
 function Weather() {
     const weatherData = useWeatherData();
+
+    if (!weatherData) {
+        return
+    }
  
 
     return (

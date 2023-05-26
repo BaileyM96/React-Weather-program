@@ -36,3 +36,8 @@ height: 150px;
 color: white;
 `;
 
+export const cardInfo = styled.div`
+display: grid;
+justify-items: center;
+`;
+
