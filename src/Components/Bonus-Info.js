@@ -1,6 +1,7 @@
 import { SmallContainer } from './Styled/Container-styled';
 import { SmallCard } from './Styled/City-Styled';
 import useWeatherData from './WeatherData';
+import { BonusData } from './Styled/Container-styled';
 import { cardInfo } from './Styled/City-Styled';
 
 export default function Bonus() {
@@ -9,11 +10,12 @@ export default function Bonus() {
         <>
         {weatherData && (
         <SmallContainer>
-            <SmallCard>
-                UV Index:
-                   <cardInfo>{weatherData.oneCall.current.uvi} </cardInfo>
+            <SmallCard>UV Index:
+                <BonusData>{weatherData.oneCall.current.uvi}</BonusData>
             </SmallCard>
-            <SmallCard>Sunrise {weatherData.oneCall.current.sunrise}</SmallCard>
+            <SmallCard>Feels like
+                <BonusData>{Math.round((weatherData.oneCall.current.feels_like))}°</BonusData>
+            </SmallCard>
             <SmallCard>Wind {weatherData.oneCall.current.wind_speed}Mph</SmallCard>
             <SmallCard>Sunset {weatherData.oneCall.current.sunset}</SmallCard>
         </SmallContainer>
