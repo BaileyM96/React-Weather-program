@@ -11,11 +11,12 @@ background-color: transparent;
 justify-content: space-between;
 align-items: center;
 padding: 10px;
-width: 50%;
+width: 65%;
 `;
 
 export const BonusData = styled.div`
 display: flex;
+font-size: 24px;
 flex-direction: row;
 justify-content: center;
 background-color: transparent;

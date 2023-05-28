@@ -26,7 +26,7 @@ export default function WeeklyForecast() {
                     <ItemForecast>
                         {getDay(day.dt)}
                         <Icon src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} />
-                        {Math.round((day.temp.day))}°
+                        {Math.round((day.temp.min))}° {Math.round((day.temp.max))}°
                     </ItemForecast>
                 </Forecast>
             ))}
