@@ -27,12 +27,13 @@ margin-top: 30px;
 export const SmallCard = styled.div`
 display: grid;
 margin-top: 30px;
+/* font-size: 24px; */
 border-radius: 10px;
 padding-top: 10px;
 justify-items: center;
 background-color: #474E68;
-width: 165px;
-height: 150px;
+width: 145px;
+height: 140px;
 color: white;
 `;
 
