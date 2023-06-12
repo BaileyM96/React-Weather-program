@@ -11,12 +11,15 @@ export default function Bonus() {
         const date = new Date(unix_timestamp * 1000) 
             return `${date.getHours()}:${date.getMinutes()}`;
     }
+
+
+
     return (
         <>
         {weatherData && (
         <SmallContainer>
             <SmallCard>UV Index
-                <BonusData>{weatherData.oneCall.current.uvi}</BonusData>
+                <BonusData>{Math.round((weatherData.oneCall.current.uvi))}</BonusData>
             </SmallCard>
             <SmallCard>Feels like
                 <BonusData>{Math.round((weatherData.oneCall.current.feels_like))}°</BonusData>
