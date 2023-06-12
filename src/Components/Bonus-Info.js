@@ -4,6 +4,8 @@ import useWeatherData from './WeatherData';
 import { BonusData } from './Styled/Container-styled';
 import { cardInfo } from './Styled/City-Styled';
 
+
+
 export default function Bonus() {
     const weatherData = useWeatherData();
 

@@ -37,6 +37,7 @@ display: grid;
 place-items: center;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(2, 1fr);
+padding-bottom: 35px;
 `;
 
 export const SmallContainer1 = styled.section`
