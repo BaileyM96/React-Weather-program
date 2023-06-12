@@ -1,0 +1,1 @@
+//TODO Add a footer to the bottom of the page to allow users to search for a city and possibly save and view the cities when they look at the app.

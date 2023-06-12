@@ -19,8 +19,8 @@ padding-left: 10px;
 place-items: center;
 justify-items: flex-start;
 color: white;
-width: 145px;
-height: 140px;
+width: 330px;
+height: 60px;
 border-radius: 10px;
 margin-top: 30px;
 `;
@@ -42,9 +42,10 @@ export const SmallCard1 = styled(SmallCard)`
 display: flex;
 justify-content: center;
 flex-direction: column;
-align-items: center;
+align-items: self-start;
 width: 90vw;
 margin-left: 20px;
+padding-left: 10px;
 `;
 
 export const cardInfo = styled.div`

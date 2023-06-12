@@ -36,17 +36,17 @@ export default function WeeklyForecast() {
     return (
         <>
         {weatherData && (
-            <StyledSlider {...settings}>
+            <WeekForecast>
             {weatherData.oneCall.daily.map((day, index) => (
-                <SmallContainer1 key={index}>
-                    <SmallCard1>
+                <Forecast key={index}>
+                    <ItemForecast>
                         {getDay(day.dt)}
                         <Icon src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} />
                         {Math.round((day.temp.min))}° {Math.round((day.temp.max))}°
-                    </SmallCard1>
-                </SmallContainer1>
+                    </ItemForecast>
+                </Forecast>
             ))}
-            </StyledSlider>
+            </WeekForecast>
         )}
         </>
     );
