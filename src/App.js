@@ -2,6 +2,7 @@ import './App.css';
 import Weather from './Components/Weather-Card';
 import Forecasted from './Components/Weekly-forecast';
 import Bonus from './Components/Bonus-Info';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Weather></Weather>
         <Forecasted></Forecasted>
         <Bonus></Bonus>
+        <Footer></Footer>
         </>
       </header>
     </div>

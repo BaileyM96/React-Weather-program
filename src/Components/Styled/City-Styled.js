@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //Hello
 export const City = styled.div`
 display: grid;
@@ -38,20 +39,20 @@ height: 140px;
 color: white;
 `;
 
-export const SmallCard1 = styled(SmallCard)`
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: self-start;
-width: 90vw;
-margin-left: 20px;
-padding-left: 10px;
-`;
 
 export const cardInfo = styled.div`
 display: grid;
 justify-items: center;
 `;
 
+export const FooterItem = styled.div`
+background-color: #474E68;
+padding-right: 30px;
+`;
+
+export const FontAwesomeDesign = styled(FontAwesomeIcon)`
+color: white;
+background-color: transparent;
+`;
 
 

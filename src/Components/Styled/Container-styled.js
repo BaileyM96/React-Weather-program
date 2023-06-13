@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Slider from 'react-slick'
+
 
 export const WeekForecast = styled.section`
 display: grid;
@@ -28,17 +28,18 @@ display: grid;
 place-items: center;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(2, 1fr);
+margin-bottom: 75px;
 `;
 
-export const SmallContainer1 = styled.section`
+export const FooterContainer = styled.section`
 display: flex;
+justify-content: flex-end;
+align-items: center;
+background-color: #474E68;
+height: 10vh;
 `;
 
-export const StyledSlider = styled(Slider)`
-display: flex;
-justify-content: center;
-align-items: center';
-`;
+
 
 
 
