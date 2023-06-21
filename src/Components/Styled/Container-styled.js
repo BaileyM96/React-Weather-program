@@ -28,7 +28,7 @@ display: grid;
 place-items: center;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(2, 1fr);
-margin-bottom: 75px;
+margin-bottom: 85px;
 `;
 
 export const FooterContainer = styled.section`
@@ -36,7 +36,11 @@ display: flex;
 justify-content: flex-end;
 align-items: center;
 background-color: #474E68;
-height: 10vh;
+min-height: 8vh;
+border-radius: 0 0 10px 10px;
+position: fixed;
+bottom: 0;
+width: 100%;
 `;
 
 

@@ -1,30 +1,33 @@
 //TODO Create a search bar so the user can search for a city 
 import { useState } from "react";
+import { SearchBarContainer, SearchField, SearchButton } from "./Styled/Search/Styled.SearchBar";
 import useWeatherData from "./WeatherData";
-import { FontAwesomeDesign } from "./Styled/City-Styled";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Search() {
+
+export default function SearchBar() {
+    const geoCoding =  process.env.REACT_APP_GEO_CODING_KEY;
     const weatherData = useWeatherData();
-    const [city, setCity] = useState('');
-    // const [weatherData, setWeatherData] = useState(null);
+    const [searchCity, setSearchCity] = useState('');
 
-    const handleInputChange = (e) => {
-        setCity(e.target.value);
+
+    //Handle the city data search
+    const handleSearch = () => {
+        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&appid=${geoCoding}`).then(response => response.json())
+        .then(data => console.log(data[0].name))
+        .catch(error => {
+            console.error('An error has occured while searching', error);
+        });
     };
 
-    const handleSearch = () => {
-        weatherData(city);
-    }
+    const handleInputChange = (e) => {
+        setSearchCity(e.target.value);
+    };
  
-
+console.log(geoCoding);
     return (
-        <>
-            <input type="text" value={city} onChange={handleInputChange} />
-                <button onClick={handleSearch}>
-                    <FontAwesomeIcon icon={faSearch} size="2xl"/>
-                </button>
-        </>
+        <SearchBarContainer>
+            <SearchField  type="text" value={searchCity} onChange={handleInputChange} placeholder="Find a City..."></SearchField>
+            <SearchButton onClick={handleSearch}>Search</SearchButton>
+        </SearchBarContainer>
     );
 }

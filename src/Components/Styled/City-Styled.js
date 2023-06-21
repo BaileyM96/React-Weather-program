@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {Search} from "semantic-ui-react";
+
 //Hello
 export const City = styled.div`
 display: grid;
@@ -54,5 +56,14 @@ export const FontAwesomeDesign = styled(FontAwesomeIcon)`
 color: white;
 background-color: transparent;
 `;
+
+export const Add = styled(FontAwesomeIcon)`
+background-color: transparent;
+`;
+
+export const Input = styled.input`
+background-color: transparent;
+`;
+
 
 
