@@ -18,7 +18,7 @@ export default function SearchBar() {
 
     //Handle the city data search
     const handleSearch = () => {
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&appid=${geoCoding}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&appid=${geoCoding}`)
         .then(response => response.json())
         .then(data => {
             const lat = data[0].lat;
