@@ -23,9 +23,10 @@ display: flex;
 justify-content: space-between;
 background-color: transparent;
 color: white;
+padding: 20px 20px 0 10px;
 `;
 
-export const Location = styled.h4`
+export const Location = styled.h3`
 color: white;
 background-color: transparent;
 `;
@@ -35,12 +36,12 @@ export const WeatherDescContainer = styled.h4`
 display: flex;
 justify-content: space-between;
 background-color: transparent;
-padding: 10px 5px 30px 10px;
+padding: 25px 15px 30px 10px;
 color: white;
 `;
 
 //Current temperture container
-export const Temperture = styled.h3`
+export const Temperture = styled.div`
 color: white;
 background-color: transparent;
 `;

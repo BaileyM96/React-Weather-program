@@ -10,8 +10,6 @@ place-items: center;
 color: white;
 width: 100;
 height: 30vh;
-/* border-style: solid;
-border-color: red; */
 `;
 
 export const Forecast = styled.section`
@@ -39,6 +37,7 @@ background-color: #474E68;
 width: 145px;
 height: 140px;
 color: white;
+margin-bottom: 10%;
 `;
 
 

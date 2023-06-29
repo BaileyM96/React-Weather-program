@@ -1,13 +1,18 @@
 import { City } from "./Styled/City-Styled";
+import { Load, LoaderContainer } from "./Styled/Semantic-Ui/Loader";
 import useWeatherData from "./WeatherData";
-// import React, { useState, useEffect } from 'react';
+
 
 
 function Weather() {
     const weatherData = useWeatherData();
 
     if (!weatherData) {
-        return
+        return (
+            <LoaderContainer>
+                <Load active size='big'>Getting Weather</Load>
+            </LoaderContainer>
+        )
     }
  
 

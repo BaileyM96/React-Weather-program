@@ -11,7 +11,6 @@ export function AddCity({ city }) {
                 <Location>{city.name}</Location>
                 <Temperture>{Math.round((city.weather.current.temp))}°</Temperture>
             </LocationContainer>
-                {/* <Location>{city.name}</Location> */}
                 <WeatherDescContainer>
                     <Location>{city.weather.current.weather[0].description}</Location>
                     <HighLow>H: {Math.round((city.weather.daily[0].temp.max))}° L: {Math.round((city.weather.daily[0].temp.min))}°</HighLow>

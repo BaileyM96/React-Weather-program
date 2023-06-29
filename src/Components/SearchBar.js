@@ -2,7 +2,11 @@
 import { useState } from "react";
 import { SearchBarContainer, SearchField, SearchButton } from "./Styled/Search/Styled.SearchBar";
 import { AddCity } from "./AddCity";
-import useWeatherData from "./WeatherData"; 
+import useWeatherData from "./WeatherData";
+import { GlobalStyle } from "./Styled/Global.Style";
+
+//Trying to use the search bar from semantic ui
+import { SemanticSearch, SemanticButton } from "./Styled/Semantic-Ui/Semantic-Search";
 
 
 export default function SearchBar() {
@@ -12,6 +16,7 @@ export default function SearchBar() {
     const [cities, setCities] = useState([]);
     const [searchCity, setSearchCity] = useState('');
     const weatherAPIKey = process.env.REACT_APP_ONE_CALL;
+
 
     
 
@@ -41,9 +46,20 @@ export default function SearchBar() {
 
     return (
         <>
+        <GlobalStyle />
         <SearchBarContainer>
-            <SearchField  type="text" value={searchCity} onChange={handleInputChange} placeholder="Find a City..."></SearchField>
-            <SearchButton onClick={handleSearch}>Search</SearchButton>
+            <SemanticSearch 
+            size='large' 
+            type='text' 
+            input={searchCity} 
+            onChange={handleInputChange} 
+            placeholder='Find a city...'
+            onClick={handleSearch}
+            >
+            </SemanticSearch>
+            <SemanticButton onClick={handleSearch}>Search</SemanticButton>
+            {/* <SearchField  type="text" value={searchCity} onChange={handleInputChange} placeholder="Find a City..."></SearchField> */}
+            {/* <SearchButton onClick={handleSearch}>Search</SearchButton> */}
         </SearchBarContainer>
         {cities.map((city, index) => <AddCity key={index} city={city}  />)}
         </>

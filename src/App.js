@@ -1,12 +1,9 @@
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
-import Weather from './Components/Weather-Card';
-import Forecasted from './Components/Weekly-forecast';
-import Bonus from './Components/Bonus-Info';
-import Footer from './Components/Footer';
 import HomePage from './Pages/Homepage';
 import MyCities from './Pages/MyCities';
+import { GlobalStyle } from './Components/Styled/Global.Style';
 
-// import 'semantic-ui-css/semantic.min.css';
 
 
 import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
@@ -14,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom
 function App() {
   return (
     <Router>
+      <GlobalStyle />
       <div className="App">
         <header className="App-header">
           <Routes>
