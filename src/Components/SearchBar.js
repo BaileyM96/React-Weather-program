@@ -1,8 +1,7 @@
 //TODO Create a search bar so the user can search for a city 
 import { useState } from "react";
-import { SearchBarContainer, SearchField, SearchButton } from "./Styled/Search/Styled.SearchBar";
+import { SearchBarContainer } from "./Styled/Search/Styled.SearchBar";
 import { AddCity } from "./AddCity";
-import useWeatherData from "./WeatherData";
 import { GlobalStyle } from "./Styled/Global.Style";
 
 //Trying to use the search bar from semantic ui
@@ -11,7 +10,6 @@ import { SemanticSearch, SemanticButton } from "./Styled/Semantic-Ui/Semantic-Se
 
 export default function SearchBar() {
     const geoCoding =  process.env.REACT_APP_GEO_CODING_KEY;
-    const weatherData = useWeatherData();
     //Store the cities that are searched into an array list
     const [cities, setCities] = useState([]);
     const [searchCity, setSearchCity] = useState('');
@@ -54,7 +52,6 @@ export default function SearchBar() {
             input={searchCity} 
             onChange={handleInputChange} 
             placeholder='Find a city...'
-            onClick={handleSearch}
             >
             </SemanticSearch>
             <SemanticButton onClick={handleSearch}>Search</SemanticButton>
