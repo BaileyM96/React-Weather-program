@@ -32,6 +32,7 @@ export default function SearchBar() {
             .then(response => response.json())
             .then(weatherData => {
                 setCities(prevCities => [...prevCities, { name: cityName, weather: weatherData }])
+                setSearchCity('');
             })
         })
         .catch(error => console.error('An error has occured cant find city.', error));
@@ -49,7 +50,7 @@ export default function SearchBar() {
             <SemanticSearch 
             size='large' 
             type='text' 
-            input={searchCity} 
+            value={searchCity} 
             onChange={handleInputChange} 
             placeholder='Find a city...'
             >
